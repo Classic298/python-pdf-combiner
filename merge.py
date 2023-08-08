@@ -2,14 +2,14 @@
 # Optional: "pip install pyinstaller"
 # Optional: PyInstaller -F ./Sourcefile.py
 
+from PyPDF2 import PdfMerger
 
-from PyPDF2 import PdfFileMerger
-pdfs = ['1.pdf', '2.pdf']
+pdfs = ['1.PDF', '2.PDF', '3.PDF', '4.PDF', '5.PDF', '6.PDF']
 
-merger = PdfFileMerger(strict=False)
+merger = PdfMerger()
 
 for pdf in pdfs:
-    merger.append(pdf,)
+    merger.append(pdf)
 
 merger.write("result.pdf")
 merger.close()
